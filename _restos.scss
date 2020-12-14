@@ -1,0 +1,239 @@
+@keyframes check-appear {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 75%;
+  }
+}
+
+@keyframes move-price {
+  from {
+    margin-right: 0%;
+  }
+  to {
+    margin-right: 25%;
+  }
+}
+
+@keyframes check-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-title{
+    padding: 0px;
+    margin: 0px;
+  }
+  .fas.back {
+    position: absolute;
+    color: #2c2c2c;
+    margin-right: 90%;
+    padding: 0px;
+  }
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+  .main-menu {
+    margin-top: -30px;
+    background-color: $section-bg;
+    border-radius: 50px 50px 0px 0px;
+  }
+  h2.resto {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: $font-logo;
+    color: $text-color;
+    margin: 10px 3% 0px;
+  }
+
+  h2.plat-title {
+    font-size: 15px;
+    font-family: $font-text;
+    margin: 10px;
+    position: relative;
+  }
+  h2.plat-title::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    display: block;
+    height: 3px;
+    background-color: $third-color; 
+    bottom: -5px;
+  }
+  .plat-type {
+    overflow: hidden;
+    min-height: 150px;
+  }
+  .plat-box {
+    margin: 10px;
+    padding: 0px 20px 0px 10px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 2px 2px 5px 2px #dddddd;
+    animation: box-appear 3s;
+    overflow: hidden;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    margin: 15px 0px 0px;
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: 100;
+    color: #2c2c2c;
+    margin: 2px -60px 10px 0px;
+  }
+  .plat-box h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 85%;
+  }
+  .plat-desc {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+  /*/title and heart figure/*/
+.fas-title .fas:not(.hidden) {
+  margin-top: -35px;
+  position: absolute;
+  margin-left: 83%;
+  font-size: 20px;
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
+.fas-title .fas:not(.hidden):hover {
+  opacity: 0;
+}
+.fas-title .fas.hidden {
+  margin-top: -36px;
+  position: absolute;
+  margin-left: 83%;
+  opacity: 0;
+  font-size: 21px;
+  -webkit-text-stroke: 1px #ff00f2;
+  transition: 1s ease-out;
+  background: linear-gradient(210deg, $heart-gradient)right;
+  
+  -webkit-text-fill-color: transparent;
+  background-size: 0%;
+}
+.fas-title .fas.hidden:hover {
+  opacity: 1;
+  background-size: 100%;
+  cursor: pointer;
+}
+figure .fas.hidden:hover {
+  opacity: 1;
+  background-size: 100%;
+}
+
+.prix {
+  display: flex;
+  float: right;
+  font-size: 14px;
+  margin-right: 0px;
+}
+span {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+//check appear//
+  .fas.fa-check {
+    background-color: $box-bg;
+    margin: 30%;
+    border-radius: 50%;
+    color: $third-color;
+    padding: 3px;
+  }
+  .check-appear {
+    display: none;
+    background-color: $third-color;
+  }
+  plat-box:hover .check-appear {
+    display: block;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    margin-left: 70%;
+    width: 100px;
+    animation: check-appear 0.5s;
+  }
+  
+  .plat-box:hover h4 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70%;
+  }
+  .plat-box:hover .price {
+    animation: move-price 0.5s;
+    margin-right: 15%;
+  }
+  
+  .plat-box:hover .fa-check {
+    margin: 70% 15px;
+    animation: check-rotate 0.5s;
+  }
+  
+  //button command//
+  .btn {
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient($second-color, $primary-color);
+    border-style: hidden;
+    font-size: 15px;
+    font-weight: 400;
+    color: $box-bg;
+    margin: 0px 0px 40px;
+    box-shadow: 2px 2px 5px 2px $section-bg;
+  }
+  .btn:hover {
+    background: linear-gradient($second-color, $primary-color);
+  }
+  .btn--order {
+    display: block;
+    margin: 40px auto 50px;
+    padding: 15px 40px;
+  }
+   
+  
+  //footer//
+  
+ 
+  
+  
+  
+  
+  
+  
+  

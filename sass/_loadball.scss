@@ -1,0 +1,181 @@
+//animation load-ball//
+
+.load-ball {
+  margin: 30px 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  position: absolute;
+}
+.load-ball.load-ball--index {
+  margin: 200px 40%;
+  width: 30%;
+  opacity: 0;
+
+}
+
+.load-ball-spin {
+  animation: load-ball-spin 5s linear;
+  
+}
+.load-ball-spin.load-ball-spin--index {
+  animation: load-ball-spin-index 5s alternate;
+  
+}
+.load-ball-spin:before {
+  border-radius: 50%;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #9b56dc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: load-ball-spin-before 4s;
+  
+}
+.load-ball-spin:after {
+  border-radius: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  background-color: #e079ff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: load-ball-spin-after 4s;
+  
+}
+.ball-spin {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  animation: ball-spin 8s;
+}
+
+@keyframes load-ball-spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+    
+  }
+  
+}
+
+@keyframes load-ball-spin-index {
+  0% {
+    opacity: 1;
+    transform: rotate(0);
+    transform: scale(4);
+  }
+  25% {
+    transform: rotate(-360deg);
+  }
+  
+}
+
+
+@keyframes load-ball-spin-before {
+  0% {
+    background: #00fff2;
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    background: #ff2ded;
+    transform: translate(-5px, -5px);
+  }
+  75% {
+    background: #aa00ff;
+    transform: translate(0, 0);
+    
+  }
+  100% {
+    background: #ff7300;
+    transform: translate(-10px, -10px);
+    }
+ }
+
+@keyframes load-ball-spin-after {
+  0% {
+    background: rgb(0, 225, 255);
+    transform: translate(5px, 5px);
+  }
+  25% {
+    background:  #9356dc;
+    transform: rotate(0deg);
+  }
+  50% {
+     background: #ff00d48c;
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(10px, 10px);
+    background: #eb8b31;
+    
+  }
+  
+}
+
+
+@keyframes ball-spin {
+0% {
+  z-index: 1;
+  position: fixed;
+}
+75% {
+  z-index: 1;
+}
+100% {
+  z-index: -1;
+}
+}  
+
+@keyframes box-appear {
+0% {
+  opacity: 0;
+  margin-top: -300px;
+}
+65% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+  margin-top: 0px;
+}
+}
+
+
+@keyframes check-appear {
+from {
+  margin-left: 110%;
+}
+to {
+  margin-left: 90%;
+}
+}
+
+@keyframes move-price {
+from {
+  margin-right: 0%;
+}
+to {
+  margin-right: 20%;
+}
+}
+
+@keyframes check-rotate {
+from {
+  transform: rotate(0);
+}
+to {
+  transform: rotate(1440deg);
+}
+}
